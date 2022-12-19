@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gallery_saver/gallery_saver.dart';
+/*import 'package:gallery_saver/gallery_saver.dart';*/
 import 'package:wallpaper/wallpaper.dart';
 import 'package:wallpaper_live/wallpaper_home.dart';
 
@@ -24,8 +24,8 @@ class DetailPage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () async {
-                String url = Photos;
-                await GallerySaver.saveImage(url);
+                /* String url = Photos;
+                await GallerySaver.saveImage(url);*/
               },
               child: Container(
                 height: 50,
