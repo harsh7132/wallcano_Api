@@ -365,7 +365,7 @@ class _Anime_apiState extends State<Anime_api> {
 
   Future<List<Anime_model>> getAnimeWallpaper() async {
     var myUrl =
-        "https://premium-anime-mobile-wallpapers-illustrations.p.rapidapi.com/rapidHandler/premium?page=3&sensitivity=0&quality=2";
+        "https://premium-anime-mobile-wallpapers-illustrations.p.rapidapi.com/rapidHandler/search";
 
     var data =
         await http.get(Uri.parse(myUrl), headers: {'X-RapidAPI-Key': myKey});
@@ -410,3 +410,28 @@ class Anime_model {
     return data;
   }
 }
+
+/*class Anime_model {
+  int? artId;
+  String? animename;
+  String? arturl;
+  int? sensitivity;
+
+  Anime_model({this.artId, this.animename, this.arturl, this.sensitivity});
+
+  Anime_model.fromJson(Map<String, dynamic> json) {
+    artId = json['art_id'];
+    animename = json['animename'];
+    arturl = json['arturl'];
+    sensitivity = json['sensitivity'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['art_id'] = this.artId;
+    data['animename'] = this.animename;
+    data['arturl'] = this.arturl;
+    data['sensitivity'] = this.sensitivity;
+    return data;
+  }
+}*/
